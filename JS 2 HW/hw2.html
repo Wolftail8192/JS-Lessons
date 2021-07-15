@@ -631,11 +631,11 @@
     }
   ];
 
-  document.write(`<div class="box dflex">`);
+  document.write(`<div class="box dflex fwrap">`);
 
   for (const user of users) {
     document.write(`
-    <div class="wrap dflex">
+    <div class="wrap dflex fwrap">
         <div class="post-card">
             <h3>${user.id} - ${user.title}</h3>
             <p>${user.body}</p>

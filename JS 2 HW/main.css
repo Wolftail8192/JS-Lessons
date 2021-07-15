@@ -4,6 +4,9 @@ html {
 
 .dflex{
     display: flex;
+
+}
+.fwrap{
     flex-wrap: wrap;
 }
 .box {
@@ -15,4 +18,22 @@ html {
     margin: 3px;
     justify-content: center;
     align-items: center;
+}
+.wraper div{
+    width: 700px;
+    margin: 3px;
+    justify-content: center;
+    align-items: center;
+}
+.users-box{
+
+}
+.user-block{
+    width: 500px;
+    margin: 3px;
+    justify-content: center;
+    align-items: center;
+    background:lightgray;
+
+
 }
