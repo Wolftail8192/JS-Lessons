@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--        template 1.1-->
+<ul>
+    <li>html</li>
+    <li>css</li>
+    <li>javascript</li>
+    <li>mysql</li>
+    <li>mongodb</li>
+    <li>react</li>
+    <li>angular</li>
+    <li>node.js</li>
+
+    <!--
+    інші об'єкти масиву
+  ...
+  ...
+  ...
+    -->
+</ul>
+
+<!---------------------------------------------->
+
+
+<!--template 2.1-->
+<div>
+    NAME- SURNAME- AGE- INFO- <img src="" alt="">
+
+</div>
+
+<!--template 2.2-->
+<div>
+    <h2>NAME SURNAME. age is - AGE</h2>
+    <p>INFO</p>
+    <img src="" alt="">
+</div>
+<!--
+інші об'єкти з масиву
+...
+...
+...
+-->
+
+<!--template 2.3-->
+<div>
+    <div>
+        <h2>NAME SURNAME. age is - AGE</h2>
+        <p>INFO</p>
+        <img src="" alt="">
+    </div>
+    <!--
+інші об'єкти з масиву
+    ...
+    ...
+    ...
+    ...
+    -->
+
+
+</div>
+
+
+<!---------------------------------------------->
+
+
+<!--        template 3.1-->
+<div>
+    <div class="product-card">
+        <h3 class="product-title">TITLE. Price - PRICE</h3>
+        <img src="" alt="https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png" class="product-image">
+    </div>
+    <!--
+                інші об'єкти з масиву
+                ...
+                ...
+                ...
+    -->
+
+</div>
+
+<script>
+    /*
+    Використовуючи данні з масиву, за допомоги document.write
+    побудувати структуру по шаблону template1.1
+    */
+
+    let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+
+
+    /*
+    Використовуючи данні з масиву, за допомоги document.write
+    побудувати структуру по шаблону template2.1 & template2.2. Зробити адекватну стилізацію.
+    Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон.
+    Шаблон застосувати до кожного об'єкта в масиві
+    */
+    let simpsons = [
+        {
+            name: 'Bart',
+            surname: 'Simpson',
+            age: 10,
+            info: 'Бартолом\'ю ДжоДжо «Барт» Сімпсон (англ. Bartholomew JoJo «Bart» Simpson) — один із головних героїв мультиплікаційного серіалу Сімпсони. Барт — найстарша дитина Гомера і Мардж Сімпсон. У нього також є дві молодші сестри — Ліса і Меґґі. Барт є втіленням образу бешкетника та посереднього учня у школі. Разом зі своїм батьком Барт є одним із найвідоміших персонажів у цьому серіалі.',
+            photo: 'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'
+        },
+        {
+            name: 'Homer',
+            surname: 'Simpson',
+            age: 40,
+            info: 'Гомер Джей Сімпсон (англ. Homer Jay Simpson) — один із головних героїв мультсеріалу «Сімпсони». Гомер — грубий і неввічливий батько родини, він має очевидні вади: товстий, лисий і не дуже розумний. Нерідко він поводиться як блазень, абсурдно, егоїстично і нетактовно, але все ж лишається симпатичним.',
+            photo: 'http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png'
+        },
+        {
+            name: 'Marge',
+            surname: 'Simpson',
+            age: 38,
+            info: 'Ма́рджори Жакли́н «Мардж» Си́мпсон (в девичестве Бувье́) (англ. Marjorie Jacqueline «Marge» Simpson) — постоянный персонаж мультипликационного сериала «Симпсоны», её озвучивает Джулия Кавнер. Обычно носит зелёное платье, красные балетки, на шее — ожерелье из искусственного жемчуга и ездит на оранжевом универсале. У неё шикарные синие волосы, которые она обычно собирает в очень высокую причёску. Глаза цвета ореха (19s6e). Основное занятие — домохозяйка, большую часть времени проводит в заботе о доме, детях и Гомере. Образ Мардж копирует стереотип провинциальной американской домохозяйки 50-х годов. Мардж — единственный член семьи, посещающий церковь добровольно. Старается поддерживать нравственность не только своей семьи, но и всего города. Отлично готовит, особенно славятся её свиные отбивные и зефир. Любимое блюдо — лапша с маслом.',
+            photo: 'https://upload.wikimedia.org/wikipedia/ru/0/0b/Marge_Simpson.png'
+        },
+        {
+            name: 'Lisa',
+            surname: 'Simpson',
+            age: 9,
+            info: 'Ли́за Мари́ Си́мпсон (англ. Lisa Marie Simpson) — героиня мультипликационного сериала «Симпсоны». Средний ребёнок в семье, восьмилетняя девочка, выделяющаяся среди остальных Симпсонов прежде всего своим умом и рассудительностью.',
+            photo: 'https://upload.wikimedia.org/wikipedia/ru/e/ec/Lisa_Simpson.png'
+        },
+        {
+            name: 'Maggie',
+            surname: 'Simpson',
+            age: 1,
+            info: 'Ма́ргарет Эвелин «Мэ́гги» Си́мпсон (англ. Margaret Evelyn “Maggie” Simpson) — персонаж мультсериала «Симпсоны». Впервые появилась на телевидении в шоу Трейси Ульман, в короткометражке Good Night (англ.)русск. 19 апреля 1987 года. Мэгги была придумана и разработана карикатуристом Мэттом Грейнингом, пока он ждал встречи с Джеймсом Л. Бруксом. Названа в честь младшей сестры Грейнинга. После появления в шоу Трейси Ульман, через три года семья Симпсонов получила собственный сериал на телеканале Fox, дебют произошёл 17 декабря 1989 года.',
+            photo: 'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
+        },
+    ];
+
+
+    /*
+    Використовуючи данні з масиву, за допомоги document.write
+    побудувати структуру по шаблону template3.1 Зробити адекватну стилізацію
+    Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
+        */
+    let products = [
+        {
+            title: 'milk',
+            price: 22,
+            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+        },
+        {
+            title: 'juice',
+            price: 27,
+            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+        },
+        {
+            title: 'tomato',
+            price: 47,
+            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+        },
+        {
+            title: 'tea',
+            price: 15,
+            image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+        },
+    ];
+
+
+
+
+
+
+</script>
+
+
+<script>
+
+    document.write(`<div>Hi, my name is ${simpsons[0].name}, ${simpsons[0].surname}, and my age is - ${simpsons[0].age}, short information about me - ${simpsons[0].info} that is me - ${simpsons[0].photo}</div>`);
+    document.write(`<div>Hi, my name is ${simpsons[1].name}, ${simpsons[1].surname}, and my age is - ${simpsons[1].age}, short information about me - ${simpsons[1].info} that is me - ${simpsons[1].photo}</div>`);
+    document.write(`<div>Hi, my name is ${simpsons[2].name}, ${simpsons[2].surname}, and my age is - ${simpsons[2].age}, short information about me - ${simpsons[2].info} that is me - ${simpsons[2].photo}</div>`);
+    document.write(`<div>Hi, my name is ${simpsons[3].name}, ${simpsons[3].surname}, and my age is - ${simpsons[3].age}, short information about me - ${simpsons[3].info} that is me - ${simpsons[3].photo}</div>`);
+    document.write(`<div>Hi, my name is ${simpsons[4].name}, ${simpsons[4].surname}, and my age is - ${simpsons[4].age}, short information about me - ${simpsons[4].info} that is me - ${simpsons[4].photo}</div>`);
+
+
+    document.write(`<div>
+                        <h2>
+                        Hi, my name is ${simpsons[0].name}, ${simpsons[0].surname}. my age is - ${simpsons[0].age}
+                        </h2>,
+                        <p>
+                        short information about me - ${simpsons[0].info}
+                        </p>
+                        <img src="https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png" alt="bart">
+                    </div>`);
+    document.write(`<div>
+                        <h2>
+                        Hi, my name is ${simpsons[1].name}, ${simpsons[1].surname}. my age is - ${simpsons[1].age}
+                        </h2>,
+                        <p>
+                        short information about me - ${simpsons[1].info}
+                        </p>
+                        <img src="http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png" alt="homer">
+                    </div>`);
+    document.write(`<div>
+                        <h2>
+                        Hi, my name is ${simpsons[2].name}, ${simpsons[2].surname}. my age is - ${simpsons[2].age}
+                        </h2>,
+                        <p>
+                        short information about me - ${simpsons[2].info}
+                        </p>
+                        <img src="https://upload.wikimedia.org/wikipedia/uk/0/0b/Marge_Simpson.png" alt="marge">
+                    </div>`);
+    document.write(`<div>
+                        <h2>
+                        Hi, my name is ${simpsons[3].name}, ${simpsons[3].surname}. my age is - ${simpsons[3].age}
+                        </h2>,
+                        <p>
+                        short information about me - ${simpsons[3].info}
+                        </p>
+                        <img src="https://upload.wikimedia.org/wikipedia/ru/e/ec/Lisa_Simpson.png" alt="lisa">
+                    </div>`);
+    document.write(`<div>
+                        <h2>
+                        Hi, my name is ${simpsons[4].name}, ${simpsons[4].surname}. my age is - ${simpsons[4].age}
+                        </h2>,
+                        <p>
+                        short information about me - ${simpsons[4].info}
+                        </p>
+                        <img src="https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png" alt="maggie">
+                    </div>`);
+
+
+    document.write('<div className="simpsons">')
+            document.write(`<div className="bart">
+            <h2>
+                Hi, my name is ${simpsons[0].name}, ${simpsons[0].surname}. my age is - ${simpsons[0].age}
+            </h2>,
+            <p>
+                short information about me - ${simpsons[0].info}
+            </p>
+            <div><img src="https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png" alt="bart"></div>
+        </div>`);
+            document.write(`<div className="homer">
+            <h2>
+                Hi, my name is ${simpsons[1].name}, ${simpsons[1].surname}. my age is - ${simpsons[1].age}
+            </h2>,
+            <p>
+                short information about me - ${simpsons[1].info}
+            </p>
+            <div><img src="http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png" alt="homer"></div>
+        </div>`);
+            document.write(`<div className="marge">
+            <h2>
+                Hi, my name is ${simpsons[2].name}, ${simpsons[2].surname}. my age is - ${simpsons[2].age}
+            </h2>,
+            <p>
+                short information about me - ${simpsons[2].info}
+            </p>
+            <div><img src="https://upload.wikimedia.org/wikipedia/uk/0/0b/Marge_Simpson.png" alt="marge"></div>
+        </div>`);
+            document.write(`<div className="lisa">
+            <h2>
+                Hi, my name is ${simpsons[3].name}, ${simpsons[3].surname}. my age is - ${simpsons[3].age}
+            </h2>,
+            <p>
+                short information about me - ${simpsons[3].info}
+            </p>
+            <div><img src="https://upload.wikimedia.org/wikipedia/ru/e/ec/Lisa_Simpson.png" alt="lisa"></div>
+        </div>`);
+            document.write(`<div className="maggie">
+            <h2>
+                Hi, my name is ${simpsons[4].name}, ${simpsons[4].surname}. my age is - ${simpsons[4].age}
+            </h2>,
+            <p>
+                short information about me - ${simpsons[4].info}
+            </p>
+            <div><img src="https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png" alt="maggie"></div>
+        </div>`);
+    document.write('</div>');
+
+    document.write(`<div> 'product - ${products[0].title},ціна - ${products[0].price} <img src="https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg" alt="milk"   </div>`)
+    document.write(`<div> 'product - ${products[1].title},ціна - ${products[1].price} <img src="https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg" alt="juice"   </div>`)
+    document.write(`<div> 'product - ${products[2].title},ціна - ${products[2].price} <img src="https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74" alt="tomato"   </div>`)
+    document.write(`<div> 'product - ${products[3].title},ціна - ${products[3].price} <img src="https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png" alt="tea"   </div>`)
+
+
+
+
+
+        document.write(listOfItems[0]);
+        document.write(listOfItems[1]);
+        document.write(listOfItems[2]);
+        document.write(listOfItems[3]);
+        document.write(listOfItems[4]);
+        document.write(listOfItems[5]);
+        document.write(listOfItems[6]);
+        document.write(listOfItems[7]);
+
+
+    <!-- Звернення до об'єкта в масиві -->
+
+
+</script>
+</body>
+</html>
