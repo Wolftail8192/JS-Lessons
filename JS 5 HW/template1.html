@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis cupiditate deleniti
+    molestias mollitia pariatur porro saepe! Dolorem eaque earum eligendi, iste maxime molestias quam vitae.
+    Dolore hic in quae sed.
+</p>
+
+<div id="rules" class="fc bp">
+    Первое правило Бойцовского клуба: никому не рассказывать о Бойцовском клубе. Второе правило Бойцовского
+    клуба: никогда никому не рассказывать о Бойцовском клубе. Третье правило Бойцовского клуба: в схватке
+    участвуют только двое. Четвертое правило Бойцовского клуба: не более одного поединка за один раз
+</div>
+
+<ul>
+    <li class="fc_rules rule1">Первое правило Бойцовского клуба: никому не рассказывать о Бойцовском клубе.</li>
+    <li class="fc_rules rule2">Второе правило Бойцовского
+        клуба: никогда никому не рассказывать о Бойцовском клубе
+    </li>
+    <li class="fc_rules rule3">Третье правило Бойцовского клуба: в схватке
+        участвуют только двое.
+    </li>
+    <li class="fc_rules rule4">Четвертое правило Бойцовского клуба: не более одного поединка за один раз</li>
+</ul>
+
+    <form id = 'a' name = 'b'>
+        <input type = 'text' name = 'username'>
+        <input type = 'password' name = 'password'>
+
+        <button>log in</button>
+
+    </form>
+
+<script src="main.js">
+
+    console.log(document.head);
+    console.log(document.body);
+
+    // - Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :
+    // // -- отримує текст з параграфа з id "content"
+
+    let content = document.body.getElementsByTagName(`p`);
+    let content = document.body.getElementsByTagName(`content`);
+    console.log(p);
+    // // -- отримує текст з блоку з id "rules"
+    let rules = document.body.getElementsByClassName('rules');
+    console.log(rules);
+    // // -- замініть текст параграфа з id 'content' на будь-який інший
+    content.innerText = 'будь-який інший';
+    // // -- замініть текст параграфа з id 'rules' на будь-який інший
+    rules.innerText = 'whatever you want'
+    // // -- змініть кожному елементу колір фону на червоний
+    let pList = document.getElementsByTagName() {
+        pListElement.style.background = 'red';
+    }
+    // // -- змініть кожному елементу колір тексту на синій
+    let pList = document.getElementsByTagName(){
+        pListElement.style.textcolor = 'blue';
+    }
+    // // -- отримати весь список класів елемента з id=rules і вивести їх в console.log
+
+    let rules = document.getElementsByTagName(`rules`);
+    console.log(document.body.rules);
+
+    // // -- отримати всі елементи з класом fc_rules. визначити їм 2 події "клік", одна вивдоить текст елементу, інша довільний ьексь
+
+    let fc_rules = document.getElementsByClassName(fc_rules);
+
+    // // -- поміняти колір тексту у всіх елементів fc_rules на червоний
+
+    let fc_rules = document.getElementsByTagName(){
+        pListElement.style.textcolor = 'red';
+    }
+</script>
+</body>
+</html>
