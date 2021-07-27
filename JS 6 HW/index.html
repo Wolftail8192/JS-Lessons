@@ -5,6 +5,25 @@
     <title>Title</title>
 </head>
 <body>
+<!--1.-->
+<!--Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті-->
+<!--https://jsonplaceholder.typicode.com/posts-->
+
+<!--2.-->
+<!--Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті-->
+<!--https://jsonplaceholder.typicode.com/comments-->
+
+<!--1.-->
+<!--Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті-->
+<!--https://jsonplaceholder.typicode.com/posts-->
+<!--зробити кнопку до кожного поста. при кліку на яку виводяться в окремий блок всі коментарі поточного поста-->
+
+<!--1.-->
+<!--Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті-->
+<!--https://jsonplaceholder.typicode.com/users-->
+<!--кожному елементу юзера створити кнопку, при клику на яку в окремий блок виводяться всі пости поточного юзера.-->
+<!--Кожному елементу post створити кнопку, при клику на яку в окремий блок виводяться всі коментарі поточного поста-->
+
 <div class="posts-wrap"></div>
 
 <div class="comments-wrap"></div>
@@ -19,7 +38,7 @@
             for (const post of value) {
                 console.log(post)
                 let div = document.createElement('div');
-                div.innerText = postsWrap;
+                div.innerHTML = post.id + '' + post.title + '' + post.body;
                 postsWrap.append(div);
             }
         });
@@ -33,7 +52,7 @@
             for (const comment of value) {
                 console.log(comment)
                 let div = document.createElement('div');
-                div.innerText = commentsWrap;
+                div.innerText = comment.id + '' + comment.name + '' + comment.email + '' + comment.body;
                 commentsWrap.append(div);
             }
         });
