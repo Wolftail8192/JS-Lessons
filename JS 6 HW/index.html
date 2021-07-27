@@ -78,7 +78,7 @@
                     fetch('https://jsonplaceholder.typicode.com/posts/${post.id}/posts')
                         .then(value => value.json())
                         .then(value => {
-                            let postsBox=document.getElementsByClassName('postComments')[0]
+                            let postsComments=document.getElementsByClassName('postComments')[0]
                             for (const post of value) {
                                let postCommentDiv=document.createElement('div');
                                 postCommentDiv.innerText=post.body;
