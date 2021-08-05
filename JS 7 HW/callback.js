@@ -25,15 +25,14 @@ function wakeUp(time, cb) {
         console.log('Я прокинувся')}
         {
             console.log('Маю сніданок')
-
         }
-        cd(null, 'Я прокинувся')
+        cb(null, 'Я прокинувся')
     },500)
 }
 function myWayToWork(cb) {
     setTimeout(()=>{
         console.log('Долаю шлях до роботи')
-        cd(null,'Долаю шлях до роботи' )
+        cb(null,'Долаю шлях до роботи' )
     },5000)
 }
 function doMyWork(time, cb) {
@@ -60,7 +59,7 @@ function goToSleep(cb) {
     })
 }
 
-myDay(38,(err, myDay) =>{
+myDay(36,(err, myDay) =>{
     if (err){
         console.error(err)
     }else{
@@ -68,25 +67,25 @@ myDay(38,(err, myDay) =>{
         console.log(prepareToGo)
     }
     prepareToGo(err)
-    if (prepareToGo){
-        wakeUp(7)
-    }else{(err)}
-    if (wakeUp){
-        myWayToWork(err)
-    }else{err}
-    if (myWayToWork){
-        doMyWork(18)
-    }else{
-        err}
-    if (doMyWork){
-        supper(err)
-    }else{err}
-    if (supper){
-        watchnews(err)
-    }else{err}
-    if (watchnews){
-        goToSleep(err)
-    }else{err}
+        if (prepareToGo){
+            wakeUp(7)
+        }else{(err)}
+            if (wakeUp){
+                myWayToWork(err)
+            }else{err}
+                if (myWayToWork){
+                    doMyWork(18)
+                }else{
+                    err}
+                    if (doMyWork){
+                        supper(err)
+                    }else{err}
+                        if (supper){
+                            watchnews(err)
+                        }else{err}
+                            if (watchnews){
+                                goToSleep(err)
+                            }else{err}
 })
 
 

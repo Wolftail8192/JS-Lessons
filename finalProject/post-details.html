@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+     console.log(location.href);
+
+     const url = new URL(location);
+     const JOSINPost = url.searchParams.get('post');
+
+     console.log(JOSINPost);
+
+     const user = JSON.parse(JOSINPost);
+     console.log(url);
+
+
+
+     document.body.innerText = JSON.stringify(post, null, 2);
+</script>
+</body>
+</html>
