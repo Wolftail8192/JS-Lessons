@@ -3,7 +3,7 @@
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(value => value.json())
     .then(value => {
-        let usersWrap = document.getElementsByClassName('users-wrap')[0];
+        let gridItem = document.getElementsByClassName('grid-item')[0];
         for (const user of value){
             let div = document.createElement('div');
             div.innerText = user.id + ' '+ user.name;
@@ -15,7 +15,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             }
             
             div.append(btn);
-            usersWrap.append(div);
+            gridItem.append(div);
         }
 
 
