@@ -3,9 +3,9 @@
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(value => value.json())
     .then(value => {
-        let gridItem = document.getElementsByClassName('grid-item')[0];
+        let gridItem = document.getElementsByClassName('two-col-grid')[0];
         for (const user of value){
-            let div = document.createElement('div');
+            let div = document.createElement('div-a');
             div.innerText = user.id + ' '+ user.name;
 
             let btn = document.createElement('button');
@@ -13,7 +13,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             btn.onclick = function () {
                 window.location.href = `users-details.html?user=${JSON.stringify(user)}`;
             }
-            
+
             div.append(btn);
             gridItem.append(div);
         }
