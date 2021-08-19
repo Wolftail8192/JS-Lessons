@@ -1,12 +1,28 @@
+let gridItem = document.getElementsByClassName('two-col-grid')[0];
+gridItem.style.display = 'grid';
+gridItem.style.gridTemplateColumns= '1fr 1fr';
+gridItem.style.fontSize = '30px';
+gridItem.style.gap = '20px';
+
 
 
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(value => value.json())
     .then(value => {
-        let gridItem = document.getElementsByClassName('two-col-grid')[0];
+
         for (const user of value){
-            let div = document.createElement('div-a');
+            let div = document.createElement('div');
+            div.style.background = 'cornflowerblue';
+            div.style.alignItems = 'center';
+            div.style.justifyContent = 'center';
+            div.style.display = 'flex';
+            div.style.flexDirection = 'column';
+
+
             div.innerText = user.id + ' '+ user.name;
+
+            // let gridItem = document.createElement('p');
+            // gridItem.innerText = user.id + ' '+ user.name;
 
             let btn = document.createElement('button');
             btn.innerText = 'details';
